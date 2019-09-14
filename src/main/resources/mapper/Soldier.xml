@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<mapper namespace="cn.example.demo.mapper.SoldierMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.example.demo.bean.Soldier">
+        <id column="soldier_id" property="soldierId" />
+        <result column="soldier_name" property="soldierName" />
+        <result column="join_army_time" property="joinArmyTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        soldier_id, soldier_name, join_army_time
+    </sql>
+
+</mapper>

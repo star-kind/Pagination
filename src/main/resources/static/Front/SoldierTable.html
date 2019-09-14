@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="../JQuery/Jquery-3.3.1.js"></script>
+<meta charset="utf-8">
+<title>士兵花名册[分页查询]</title>
+
+<style type="text/css">
+table {
+	table-layout: fixed;
+	empty-cells: show;
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+h1, h2, h3 {
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+}
+
+th, td {
+	border: 1px solid #CAD9EA;
+	padding: 5px;
+}
+
+tr {
+	background-color: #e8f3fd;
+}
+
+a, p {
+	margin-left: 15px;
+	margin-top: 10px;
+}
+</style>
+
+</head>
+<body>
+	<div style="margin-top: 40px; text-align: center;">
+
+		<div>
+			<span>跳至指定页</span>
+			<p>
+				<input type="text" name="pageNum" id="assign_input">
+				<!--  -->
+				<input type="button" value="GO" onclick="jumpToAssignPage()">
+			</p>
+		</div>
+
+		<table id="soldier_table" cellspacing="0" cellpadding="0" border="0" width="750">
+			<thead>
+				<tr>
+					<th>名册序号</th>
+					<th>身份ID</th>
+					<th>名字</th>
+					<th>入伍时间</th>
+				</tr>
+			</thead>
+
+			<tbody id="soldier_table_tobody">
+
+			</tbody>
+
+			<tfoot>
+				<p>
+					<!--  -->
+					总页数: <span id="total_page"></span>
+				</p>
+				<p>
+					<!--  -->
+					当前页: <span id="current_page"></span>
+				</p>
+			</tfoot>
+		</table>
+
+		<div>
+			<!--  -->
+			<a id="previousPage" href="javascript:jumpToPreviousPage()">
+				<h5>上一页</h5>
+			</a>
+
+			<!--  -->
+			<a id="nextPage" href="javascript:jumpToNextPage()">
+				<h5>下一页</h5>
+			</a>
+		</div>
+
+	</div>
+</body>
+
+<script type="text/javascript" src="../OwnJavascript/LimitTable.js"></script>
+</html>
